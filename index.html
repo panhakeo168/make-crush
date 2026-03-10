@@ -3,45 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+Khmer:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Khmer Font Test</title>
+    <title>Khmer Button Test</title>
     <style>
       body {
-        /* Added quotes around the font name */
-        font-family: "Noto Sans Khmer", sans-serif !important;
+        /* This list tries local Khmer fonts first, then Google, then system default */
+        font-family:
+          "Khmer OS Battambang", "Khmer OS", "Leelawadee UI", "Noto Sans Khmer",
+          sans-serif !important;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         margin: 0;
+        background-color: #f0f0f0;
       }
+
       a {
         text-decoration: none;
       }
+
       button {
+        /* Buttons MUST have the font-family repeated here */
+        font-family: inherit;
         border: none;
         outline: none;
         background-color: red;
         color: white;
-        padding: 20px 25px;
+        padding: 15px 30px;
         border-radius: 10px;
         font-size: 24px;
         cursor: pointer;
-        /* Ensure font-family is inherited or explicitly set on buttons */
-        font-family: "Noto Sans Khmer", sans-serif;
+        transition: 0.2s;
       }
+
       button:active {
         background-color: darkred;
+        transform: scale(0.98);
       }
     </style>
   </head>
   <body>
-    <a href="https://youtu.be/4oxnF6Oqk-4?si=wFUG7vLOFLCqp5Um">
+    <a href="https://youtu.be/4oxnF6Oqk-4">
       <button>វិធីធ្វើឱ្យCrushលួចស្រលាញ់</button>
     </a>
   </body>
